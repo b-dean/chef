@@ -15,6 +15,8 @@ group(:development, :test) do
   gem 'ruby-shadow', :platforms => :ruby unless RUBY_PLATFORM.downcase.match(/(darwin|freebsd|aix)/)
 end
 
+gem 'mixlib-cli', :git => 'https://github.com/opscode/mixlib-cli.git', :branch => 'jk/1.4.0'
+
 # If you want to load debugging tools into the bundle exec sandbox,
 # add these additional dependencies into chef/Gemfile.local
 eval(IO.read(__FILE__ + '.local'), binding) if File.exists?(__FILE__ + '.local')
